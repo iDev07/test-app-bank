@@ -61,7 +61,7 @@ body {
 .tasks_container {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .task_card {

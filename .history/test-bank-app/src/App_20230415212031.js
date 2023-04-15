@@ -52,62 +52,58 @@ const KanbanBoard = () => {
 
   return (
     <div className="kanban-board">
-      <div className="task_adder">
-        <form onSubmit={handleSubmit}>
-          <div className="main_card">
-            <div className="title">
-              <label>
-                Title:
-                <input
-                  type="text"
-                  value={newTask.title}
-                  onChange={(event) =>
-                    setNewTask({ ...newTask, title: event.target.value })
-                  }
-                  required
-                />
-              </label>
-            </div>
-            <div className="description">
-              <label>
-                Description:
-                <input
-                  value={newTask.description}
-                  onChange={(event) =>
-                    setNewTask({ ...newTask, description: event.target.value })
-                  }
-                  required
-                />
-              </label>
-            </div>
-            <div className="file">
-              <label>
-                File:
-                <input
-                  type="file"
-                  onChange={(event) =>
-                    setNewTask({
-                      ...newTask,
-                      file: URL.createObjectURL(event.target.files[0]),
-                    })
-                  }
-                />
-              </label>
-            </div>
-            <button type="submit">Add Task</button>
+      <form onSubmit={handleSubmit}>
+        <div className="main_card">
+          <div className="title">
+            <label>
+              Title:
+              <input
+                type="text"
+                value={newTask.title}
+                onChange={(event) =>
+                  setNewTask({ ...newTask, title: event.target.value })
+                }
+                required
+              />
+            </label>
           </div>
-        </form>
-      </div>
-      <div className="tasks_container">
-        {tasks.map((task) => (
-          <div className="task_card" key={task.id}>
-            <h2>{task.title}</h2>
-            <p>{task.description}</p>
-            {task.file && <img src={task.file} alt={task.title} />}
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+          <div className="description">
+            <label>
+              Description:
+              <input
+                value={newTask.description}
+                onChange={(event) =>
+                  setNewTask({ ...newTask, description: event.target.value })
+                }
+                required
+              />
+            </label>
           </div>
-        ))}
-      </div>
+          <div className="file">
+            <label>
+              File:
+              <input
+                type="file"
+                onChange={(event) =>
+                  setNewTask({
+                    ...newTask,
+                    file: URL.createObjectURL(event.target.files[0]),
+                  })
+                }
+              />
+            </label>
+          </div>
+          <button type="submit">Add Task</button>
+        </div>
+      </form>
+      {tasks.map((task) => (
+        <div className="task_card" key={task.id}>
+          <h2>{task.title}</h2>
+          <p>{task.description}</p>
+          {task.file && <img src={task.file} alt={task.title} />}
+          <button onClick={() => deleteTask(task.id)}>Delete</button>
+        </div>
+      ))}
     </div>
   );
 };

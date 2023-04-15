@@ -13,7 +13,7 @@ body {
 }
 .kanban-board {
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 20% 80%;
 }
 .main_card {
   margin: 20px 0;
@@ -61,7 +61,6 @@ body {
 .tasks_container {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  margin-left: 10%;
 }
 
 .task_card {

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2048x1080/335d9efc6ad452ae9fc85671815e2cb5/photo-1647791753411-4cc21f9c85da.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
