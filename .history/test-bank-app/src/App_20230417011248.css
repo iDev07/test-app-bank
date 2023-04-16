@@ -66,25 +66,8 @@ body {
 
 .task_card {
   /* width: 220px; */
-  position: relative;
-  margin: 20px 10px;
+  margin: 15px 10px;
   width: 100%;
-  padding: 15px 10px;
   background-color: #d5d6d8;
   border-radius: 10px;
-}
-.task_card img {
-  width: 100%;
-}
-.deleteTask {
-  width: 100%;
-  padding: 5px;
-  font-size: 18px;
-  border: none;
-  background-color: red;
-  color: #fff;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
